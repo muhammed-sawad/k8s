@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: default-resource-quota
+  namespace: default
+spec:
+  hard:
+    pods: "30"        # Maximum number of pods
+    requests.cpu: "4" # Maximum CPU request in cpu units (millicores)
+    requests.memory: 4Gi   # Maximum memory request
+    limits.cpu: "6"    # Maximum CPU limit in cpu units (millicores)
+    limits.memory: 6Gi # Maximum memory limit
+    services: "5"     # Maximum number of services
+    configmaps: "10"  # Maximum number of config maps
+    persistentvolumeclaims: "5"  # Maximum number of persistent volume claims

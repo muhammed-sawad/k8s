@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata: 
+  name: "test admin cluster binding"
+subjects: 
+- kind: ServiceAccount
+  name: foo
+  apiGroup: ""
+  namespace:  rbac
+roleRef:  
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: ""
